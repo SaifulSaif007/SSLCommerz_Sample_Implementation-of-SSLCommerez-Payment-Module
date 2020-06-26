@@ -1,15 +1,13 @@
-package com.example.test;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.Saiful.SampleApp;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.test.databinding.ActivityMainBinding;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.Saiful.SampleApp.databinding.ActivityMainBinding;
 import com.sslcommerz.library.payment.model.datafield.MandatoryFieldModel;
 import com.sslcommerz.library.payment.model.dataset.TransactionInfo;
 import com.sslcommerz.library.payment.model.util.CurrencyType;
@@ -21,7 +19,7 @@ import com.sslcommerz.library.payment.viewmodel.management.PayUsingSSLCommerz;
 
 import java.util.UUID;
 
-public class MainActivity extends AppCompatActivity {
+public class PaymentInputActivity extends AppCompatActivity {
 
     private ActivityMainBinding activityMainBinding;
     @Override
@@ -88,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.e("RiskTitle", "Transaction in risk. Risk Title : " + transactionInfo.getRiskTitle());
                 }
 
-                Toast.makeText(MainActivity.this, "Payment Successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PaymentInputActivity.this, "Payment Successful", Toast.LENGTH_SHORT).show();
                 ClearText();
 
             }
